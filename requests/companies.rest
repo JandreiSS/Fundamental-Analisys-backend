@@ -1,0 +1,15 @@
+POST http://localhost:3333/companies
+content-type: application/json
+
+{
+    "ticket": "WEGE3"
+}
+###
+POST http://localhost:3333/companies
+content-type: application/json
+
+{
+    "ticket": "BIDI4"
+}
+###
+GET http://localhost:3333/companies
