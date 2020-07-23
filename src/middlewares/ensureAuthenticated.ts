@@ -3,6 +3,8 @@ import { verify } from 'jsonwebtoken'
 
 import authConfig from '../config/auth'
 
+import AppError from '../errors/AppError'
+
 interface TokenPayload {
   iat: string
   exp: string
@@ -18,22 +20,18 @@ export default function ensureAuthenticated(
   const authHeader = request.headers.authorization
 
   if (!authHeader) {
-    throw new Error('JSON Web Token is missing')
+    throw new AppError('JSON Web Token is missing', 401)
   }
 
   const [, token] = authHeader.split(' ')
 
-  try {
-   const decoded = verify(token, authConfig.jwt.secret)
+  const decoded = verify(token, authConfig.jwt.secret)
 
-   const { sub } = decoded as TokenPayload
+  const { sub } = decoded as TokenPayload
 
-   request.user = {
-     id: sub,
-   }
-
-   return next()
-  } catch {
-    throw new Error('Invalid JSON Web Token')
+  request.user = {
+    id: sub,
   }
+
+  return next()
 }

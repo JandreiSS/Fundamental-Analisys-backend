@@ -18,17 +18,13 @@ companiesRouter.get('/', (request, response) => {
 })
 
 companiesRouter.post('/', (request, response) => {
-  try {
-    const { ticket } = request.body
+  const { ticket } = request.body
 
-    const createCompanySearch = new CreateCompanyService(companiesRepository)
+  const createCompanySearch = new CreateCompanyService(companiesRepository)
 
-    const company = createCompanySearch.execute({ ticket })
+  const company = createCompanySearch.execute({ ticket })
 
-    return response.json(company)
-  } catch (err) {
-    return response.status(400).json({ error: err.message })
-  }
+  return response.json(company)
 })
 
 export default companiesRouter
