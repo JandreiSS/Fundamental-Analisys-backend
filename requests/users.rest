@@ -6,3 +6,7 @@ content-type: application/json
   "email": "jandrei@fa.com",
   "password": "123456"
 }
+
+###
+PATCH http://localhost:3333/users/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU1MTAwNzQsImV4cCI6MTU5NTU5NjQ3NCwic3ViIjoiZDBlODZiYTgtMjNiYy00NGViLWE4NDItOGZmZDhlNzQ5OWU5In0.T53Q568xgbu_1hbM4Wd_71GNSp0J5Imhr0ibzcctq7g
