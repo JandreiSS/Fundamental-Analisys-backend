@@ -1,7 +1,7 @@
 import Company from '../models/Company'
 
 interface CreateCompanySearchDTO {
-  ticket: string
+  ticker: string
 }
 
 class CompaniesRepository {
@@ -15,8 +15,8 @@ class CompaniesRepository {
     return this.companies
   }
 
-  public create({ ticket }: CreateCompanySearchDTO): Company {
-    const company = new Company({ ticket })
+  public create({ ticker }: CreateCompanySearchDTO): Company {
+    const company = new Company({ ticker })
 
     this.companies.push(company)
 

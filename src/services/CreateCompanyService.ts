@@ -5,7 +5,7 @@ import CompaniesRepository from '../repositories/CompaniesRepository'
 import AppError from '../errors/AppError'
 
 interface Request {
-  ticket: string
+  ticker: string
 }
 
 
@@ -16,12 +16,12 @@ class CreateCompanyService {
     this.companiesRepository = companiesRepository
   }
 
-  public execute({ ticket }: Request): Company {
-    if (!ticket) {
+  public execute({ ticker }: Request): Company {
+    if (!ticker) {
       throw new AppError('This ticket does not exist')
     }
 
-    const company = this.companiesRepository.create({ ticket })
+    const company = this.companiesRepository.create({ ticker })
 
     return company
   }

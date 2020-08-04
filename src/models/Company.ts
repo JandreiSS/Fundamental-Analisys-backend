@@ -1,12 +1,12 @@
 interface CreateCompanySearchDTO {
-  ticket: string
+  ticker: string
 }
 
 class Company {
-  ticket: string
+  ticker: string
 
-  constructor({ ticket }: CreateCompanySearchDTO) {
-    this.ticket = ticket
+  constructor({ ticker }: CreateCompanySearchDTO) {
+    this.ticker = ticker
   }
 }
 

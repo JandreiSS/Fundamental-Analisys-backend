@@ -18,11 +18,11 @@ companiesRouter.get('/', (request, response) => {
 })
 
 companiesRouter.post('/', (request, response) => {
-  const { ticket } = request.body
+  const { ticker } = request.body
 
   const createCompanySearch = new CreateCompanyService(companiesRepository)
 
-  const company = createCompanySearch.execute({ ticket })
+  const company = createCompanySearch.execute({ ticker })
 
   return response.json(company)
 })
