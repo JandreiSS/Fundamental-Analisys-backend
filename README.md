@@ -6,7 +6,7 @@ O objetivo dessa aplicação é realizar a busca de dados de empresas na bolsa d
 
 - [ ] O usuário pode pesquisar por diferentes tickets, um de cada vez, tendo como retorno os dados de todos, para comparação
 - [ ] Os dados retornados serão:
-  - [ ] Ticket da empresa
+  - [ ] Ticker da empresa
   - [ ] Nome da empresa
   - [ ] Setor
   - [ ] Subsetor
