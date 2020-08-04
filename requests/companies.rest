@@ -3,14 +3,14 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU1MTAwNzQsImV4cCI6MTU5NTU5NjQ3NCwic3ViIjoiZDBlODZiYTgtMjNiYy00NGViLWE4NDItOGZmZDhlNzQ5OWU5In0.T53Q568xgbu_1hbM4Wd_71GNSp0J5Imhr0ibzcctq7g
 
 {
-    "ticket": "WEGE3"
+    "ticker": "WEGE3"
 }
 ###
 POST http://localhost:3333/companies
 content-type: application/json
 
 {
-    "ticket": "BIDI4"
+    "ticker": "BIDI4"
 }
 ###
 GET http://localhost:3333/companies
